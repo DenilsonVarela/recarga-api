@@ -1,6 +1,5 @@
 package com.example.restapi.dtos;
 
-import com.example.restapi.models.PagamentoModel;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
@@ -25,18 +24,23 @@ public class RecargaDto {
     public String getcliente() {
         return cliente;
     }
+
     public void setcliente(String cliente) {
         this.cliente = cliente;
     }
+
     public String getdataRecarga() {
         return dataRecarga;
     }
+
     public void setdataRecarga(String dataRecarga) {
         this.dataRecarga = dataRecarga;
     }
+
     public Double getValor() {
         return valor;
     }
+
     public void setValor(Double valor) {
         this.valor = valor;
     }

@@ -3,7 +3,9 @@ package com.example.restapi.controllers;
 import com.example.restapi.dtos.PagamentoDto;
 import com.example.restapi.models.PagamentoModel;
 import com.example.restapi.repositories.PagamentoRepository;
+
 import jakarta.validation.Valid;
+
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,6 +17,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 @RestController
+@RequestMapping("/v1")
 public class PagamentoController {
 
     @Autowired

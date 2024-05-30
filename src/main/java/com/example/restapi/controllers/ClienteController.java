@@ -3,7 +3,9 @@ package com.example.restapi.controllers;
 import com.example.restapi.dtos.ClienteDto;
 import com.example.restapi.models.ClienteModel;
 import com.example.restapi.repositories.ClienteRepository;
+
 import jakarta.validation.Valid;
+
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,6 +17,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 @RestController
+@RequestMapping("/v1")
 public class ClienteController {
 
     @Autowired
@@ -60,6 +63,6 @@ public class ClienteController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Cliente não encontrado.");
         }
         clienteRepository.delete(cliente0.get());
-        return ResponseEntity.status(HttpStatus.OK).body("Produto deletado com sucesso.");
+        return ResponseEntity.status(HttpStatus.OK).body("Cliente deletado com sucesso.");
     }
 }

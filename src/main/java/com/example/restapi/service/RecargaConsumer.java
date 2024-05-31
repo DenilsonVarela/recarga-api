@@ -17,6 +17,10 @@ import org.springframework.web.client.RestTemplate;
 
 import java.time.LocalDateTime;
 
+/**
+ * Classe de serviço para consumir mensagens de recarga.
+ * Esta classe é responsável por processar as mensagens de recarga recebidas.
+ */
 @Component
 public class RecargaConsumer {
     @Autowired
@@ -28,6 +32,11 @@ public class RecargaConsumer {
     @Autowired
     private PagamentoRepository pagamentoRepository;
 
+    /**
+     * Processa uma mensagem de recarga.
+     * Esta função é chamada quando uma mensagem de recarga é recebida.
+     * @param recarga A mensagem de recarga recebida.
+     */
     @RabbitListener(queues = RabbitMQConfig.QUEUE)
     public void processarRecarga(RecargaModel recarga) {
 
